@@ -1,7 +1,11 @@
+/*reserva*/ 
 export class CreateHotelDto {
-    nome: string;
-    cpf: string
-    telefone: string
-    endereco: string;
-    cidade: string;
+   id: string;
+   dataHoraInicial: string;
+   dataHoraFinal: string;
+   quartoReservado: string;
+   hospede: string;
+   
+   
+
 }
