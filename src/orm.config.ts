@@ -2,6 +2,8 @@ import {TypeOrmModuleOptions} from '@nestjs/typeorm';
 import {TypeOrmModule} from '@nestjs/typeorm';
 
 
+
+
 export const config: TypeOrmModuleOptions = {
     type:'postgres',
     username: 'postgres',
