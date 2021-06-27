@@ -3,6 +3,17 @@ import { HospedeService } from './hospede.service';
 import { CreateHospedeDto } from './dto/create-hospede.dto';
 import { UpdateHospedeDto } from './dto/update-hospede.dto';
 
+
+import { getRepository } from 'typeorm'
+import { Request, Response } from 'express'
+
+export const getHospede = async (request: Request, response: Response) => {
+
+  const hospede = await getRepository(hospede).find()
+  return response.json(hospede)
+};
+
+
 @Controller('hospede')
 export class HospedeController {
   constructor(private readonly hospedeService: HospedeService) {}

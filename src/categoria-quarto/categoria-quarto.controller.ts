@@ -3,6 +3,19 @@ import { CategoriaQuartoService } from './categoria-quarto.service';
 import { CreateCategoriaQuartoDto } from './dto/create-categoria-quarto.dto';
 import { UpdateCategoriaQuartoDto } from './dto/update-categoria-quarto.dto';
 
+
+import { getRepository } from 'typeorm'
+import { Request, Response } from 'express'
+
+export const getHospede = async (request: Request, response: Response) => {
+
+  const categoriaQuarto = await getRepository(categoriaQuarto).find()
+  return response.json(categoriaQuarto)
+};
+
+
+
+
 @Controller('categoria-quarto')
 export class CategoriaQuartoController {
   constructor(private readonly categoriaQuartoService: CategoriaQuartoService) {}

@@ -1,6 +1,6 @@
 /*reserva*/ 
 export class CreateHotelDto {
-   id: string;
+   id: number;
    dataHoraInicial: string;
    dataHoraFinal: string;
    quartoReservado: string;
