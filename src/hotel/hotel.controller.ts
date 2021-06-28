@@ -44,7 +44,7 @@ export const updateHotel = async (request: Request, response: Response) =>{
  
 
 
-/*@Controller('hotel')
+@Controller('hotel')
 export class HotelController {
   constructor(private readonly hotelService: HotelService) {}
 
@@ -75,5 +75,5 @@ export class HotelController {
 }
 function hotel(hotel: any) {
   throw new Error('Function not implemented.');
-}*/
+}
 

@@ -6,10 +6,11 @@ import { UpdateHospedeDto } from './dto/update-hospede.dto';
 
 import { getRepository } from 'typeorm'
 import { Request, Response } from 'express'
+import { Hospede } from './entities/hospede.entity';
 
 export const getHospede = async (request: Request, response: Response) => {
 
-  const hospede = await getRepository(hospede).find()
+  const hospede = await getRepository(Hospede).find()
   return response.json(hospede)
 };
 
