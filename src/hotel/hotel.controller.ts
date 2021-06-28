@@ -1,11 +1,15 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { HotelService } from './hotel.service';
-/*import { CreateHotelDto } from './dto/create-hotel.dto';*/
+import { CreateHotelDto } from './dto/create-hotel.dto';
 import { UpdateHotelDto } from './dto/update-hotel.dto';
 
 import { getRepository } from 'typeorm'
 import { Request, Response } from 'express'
 import { Hotel } from './entities/hotel.entity';
+import { QuartoHotelController } from 'src/quarto-hotel/quarto-hotel.controller';
+
+
+
 
 export const getHotels = async (request: Request, response: Response) => {
 

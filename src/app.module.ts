@@ -12,8 +12,23 @@ import { TypeOrmModule } from  '@nestjs/typeorm';
 
 
 @Module({
-  imports: [HotelModule, HospedeModule, QuartoHotelModule, CategoriaQuartoModule, TypeOrmModule.forRoot(config)],
+  /*imports: [HotelModule, HospedeModule, QuartoHotelModule, CategoriaQuartoModule, TypeOrmModule.forRoot(config)],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService],*/
+
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'root',
+      password: '1234',
+      database: 'hotelaria',
+      entities: [],
+      synchronize: true,
+    }),
+  ],
+
+
 })
 export class AppModule {}

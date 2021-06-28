@@ -1,7 +1,7 @@
 import {TypeOrmModuleOptions} from '@nestjs/typeorm';
 import {TypeOrmModule} from '@nestjs/typeorm';
 
-import { createConnection } from 'net';
+/*import { createConnection } from 'net';*/
 
 
 
