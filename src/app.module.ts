@@ -8,6 +8,7 @@ import { CategoriaQuartoModule } from './categoria-quarto/categoria-quarto.modul
 import { config } from './orm.config';
 import { Connection, ConnectionOptions } from 'typeorm';
 import { EntitySchema } from 'typeorm';
+import { TypeOrmModule } from  '@nestjs/typeorm';
 
 
 @Module({
